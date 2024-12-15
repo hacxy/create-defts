@@ -2,5 +2,5 @@ import linter from '@hacxy/eslint-config/nodejs';
 
 export default linter({
   yaml: true,
-  ignores: ['scripts/git-hooks/**', 'templates']
+  ignores: ['scripts']
 });

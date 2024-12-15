@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { bootstrap } from '../src';
 
-describe('cli', () => {
+describe('cli template', () => {
   it('bootstrap', () => {
-    expect(bootstrap).toBeTypeOf('function');
+    expect(bootstrap()).toBeUndefined();
   });
 });
-

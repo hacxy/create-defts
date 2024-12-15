@@ -1,0 +1,36 @@
+{
+  "title": "project type",
+  "message": "请选择项目类型",
+  "type": "select",
+  "items": {
+    "cli": {
+      "title": "cli",
+      "message": "",
+      "type": "select",
+      "items": {
+        "unbuild": {
+          "title": "cli-unbuild",
+          "message": "",
+          "repo": "hacxy/cli-unbuild-template"
+        },
+        "tsup": {
+          "title": "cli-tsup",
+          "message": "",
+          "repo": "hacxy/cli-tsup-template"
+        }
+      }
+    },
+    "library": {
+      "title": "library",
+      "message": "",
+      "items": {
+        "vite": {
+          "title": "library-vite",
+          "message": "",
+          "repo": "hacxy/library-empty-template"
+        }
+      }
+    }
+
+  }
+}
