@@ -1,8 +1,8 @@
 {
-  "name": "defts",
+  "name": "create-atsp",
   "type": "module",
   "version": "0.0.1",
-  "description": "Create a project with TypeScript as the default language.",
+  "description": "Create a TypeScript project.",
   "author": {
     "name": "hacxy",
     "email": "hacxy.js@outlook.com"
@@ -14,12 +14,13 @@
   ],
   "bin": {
     "defts": "index.js",
-    "create-defts": "index.js"
+    "create-atsp": "index.js"
   },
   "files": [
     "dist",
     "index.js",
-    "templates"
+    "templates",
+    "templates.config.json"
   ],
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
@@ -59,7 +60,7 @@
     "lint-staged": "^15.2.11",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.7.2",
-    "unbuild": "^2.0.0",
+    "unbuild": "^3.0.1",
     "vitest": "^2.1.8"
   },
   "simple-git-hooks": {
