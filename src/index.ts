@@ -1,11 +1,12 @@
-import { cpSync, renameSync } from 'node:fs';
+import { cpSync, renameSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { input } from '@inquirer/prompts';
+import { confirm, input } from '@inquirer/prompts';
 import consola from 'consola';
 import { red } from 'kolorist';
 import config from '../template.config.json';
 import { parseArg, printActionsInfo, renamePackageName } from './utils/common';
+import { errorLog } from './utils/log';
 import { prompts } from './utils/prompts';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -28,6 +29,18 @@ export async function bootstrap() {
 
   const finalTempPath = path.resolve(templatePath, template);
   const targetPath = path.resolve(process.cwd(), projectName);
+
+  // check dir is empty
+  const isRemove = await confirm({
+    message: `Target directory ${targetPath} is not empty. Remove existing files and continue?`,
+    default: true
+  }).catch(() => {
+    errorLog('Cancelled!');
+  });
+
+  if (isRemove) {
+    rmSync(targetPath, { force: true, recursive: true });
+  }
 
   cpSync(finalTempPath, targetPath, { recursive: true });
   renameSync(path.resolve(targetPath, '_gitignore'), path.resolve(targetPath, '.gitignore'));
