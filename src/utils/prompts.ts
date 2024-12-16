@@ -1,10 +1,12 @@
 import { select } from '@inquirer/prompts';
+import consola from 'consola';
+import { red } from 'kolorist';
 
 export async function prompts(promptItem: any) {
   const choices = Object.keys(promptItem.items).map((item: string) => {
     return {
       name: item,
-      description: (promptItem.items as any)[item].message,
+      description: (promptItem.items as any)[item].description,
       value: (promptItem.items as any)[item]
     };
   });
@@ -14,6 +16,9 @@ export async function prompts(promptItem: any) {
     value = await select({
       message: promptItem.message,
       choices
+    }).catch(() => {
+      consola.error(red('Cancelled!'));
+      process.exit(0);
     });
   }
 
