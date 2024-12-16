@@ -1,8 +1,73 @@
-# Defts
+# create-atsp
 
-## Whats is Defts
+🚀 Create a TypeScript project.
 
-Defts is a CLI tool.
+It is evident that this is a Nodejs-based scaffolding tool designed to help you quickly create a project developed using the TypeScript language.
 
-It helps you quickly creating a project with TypeScript as the default language.
+- All projects default to using TypeScript instead of JavaScript.
 
+- Multiple project types are available, such as: `CLI(command-line tool)`、`Library(tool library)`
+
+- Based on [@hacxy/eslint-config](https://github.com/hacxy/eslint-config) and uses a unified coding style.
+
+- Default to validating git commit messages, use `npm run commit` to generate fixed-format commit messages.
+
+- Default to providing a release script and automatically creating a GitHub release, execute `npm run release` to complete the release process.
+
+## Prerequisites
+
+- nodejs >= 18
+
+## Usage
+
+Using npm:
+
+```sh
+npm create atsp@latest
+```
+
+Using yarn:
+
+```sh
+yarn create atsp
+```
+
+Using pnpm:
+
+```sh
+pnpm create atsp
+```
+
+Using bun:
+
+```sh
+bun create atsp
+```
+
+Please follow the prompts after execution.
+
+---
+
+You can also specify the project name and required project template directly through additional command-line options. For example, to build a CLI project, run:
+
+```sh
+# npm 7+, an additional double dash is required:
+
+npm create atsp@latest my-cli-app -- --template cli-tsup
+
+# yarn:
+
+yarn create atsp my-cli-app --template cli-tsup
+
+# pnpm:
+
+pnpm create atsp my-cli-app --template cli-tsup
+
+# bun:
+
+bun create atsp my-cli-app --template cli-tsup
+```
+
+## License
+
+[MIT](./LICENSE) License &copy; 2023-PRESENT [Hacxy](https://github.com/hacxy)
