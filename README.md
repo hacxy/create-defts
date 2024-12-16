@@ -2,6 +2,8 @@
 
 🚀 Create a TypeScript project.
 
+English | [简体中文](./README_zh.md)
+
 It is evident that this is a Nodejs-based scaffolding tool designed to help you quickly create a project developed using the TypeScript language.
 
 - All projects default to using TypeScript instead of JavaScript.

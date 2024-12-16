@@ -2,6 +2,8 @@
 
 🚀 创建一个typescript项目.
 
+简体中文 | [English](./README.md)
+
 很显然, 这是一个基于 Nodejs 的脚手架工具, 用于帮助您快速创建一个使用 TypeScript 语言开发的项目.
 
 - 所有项目默认都使用 typescript 而不是 javascript
