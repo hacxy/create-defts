@@ -8,13 +8,15 @@ It is evident that this is a Nodejs-based scaffolding tool designed to help you 
 
 - All projects default to using TypeScript instead of JavaScript.
 
-- Multiple project types are available, such as: `CLI(command-line tool)`、`Library(tool library)`
+- Multiple project types are available, such as: `CLI(command-line tool)` and `Library(tool library)`
 
 - Based on [@hacxy/eslint-config](https://github.com/hacxy/eslint-config) and uses a unified coding style.
 
 - Default to validating git commit messages, use `npm run commit` to generate fixed-format commit messages.
 
 - Default to providing a release script and automatically creating a GitHub release, execute `npm run release` to complete the release process.
+
+![](https://raw.githubusercontent.com/hacxy/hacxy/main/images/Kapture%202024-12-16%20at%2015.19.44.gif)
 
 ## Prerequisites
 

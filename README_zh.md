@@ -12,6 +12,8 @@
 - 默认校验 git 提交信息, 使用`npm run commit`生成固定格式的提交信息
 - 默认提供发布脚本, 并自动创建 github release, 执行 `npm run release` 完成发布流程
 
+![](https://raw.githubusercontent.com/hacxy/hacxy/main/images/Kapture%202024-12-16%20at%2015.19.44.gif)
+
 ## 先决条件
 - nodejs >= 18
 
