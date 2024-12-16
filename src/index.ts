@@ -1,4 +1,4 @@
-import { cpSync, renameSync, rmSync } from 'node:fs';
+import { cpSync, existsSync, renameSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { confirm, input } from '@inquirer/prompts';
@@ -31,17 +31,19 @@ export async function bootstrap() {
   const targetPath = path.resolve(process.cwd(), projectName);
 
   // check dir is empty
-  const isRemove = await confirm({
-    message: `Target directory ${targetPath} is not empty. Remove existing files and continue?`,
-    default: true
-  }).catch(() => {
-    errorLog('Cancelled!');
-  });
+  if (existsSync(targetPath)) {
+    const isRemove = await confirm({
+      message: `Target directory ${targetPath} is not empty. Remove existing files and continue?`,
+      default: true
+    }).catch(() => {
+      errorLog('Cancelled!');
+      process.exit(0);
+    });
 
-  if (isRemove) {
-    rmSync(targetPath, { force: true, recursive: true });
+    if (isRemove) {
+      rmSync(targetPath, { force: true, recursive: true });
+    }
   }
-
   cpSync(finalTempPath, targetPath, { recursive: true });
   renameSync(path.resolve(targetPath, '_gitignore'), path.resolve(targetPath, '.gitignore'));
   renamePackageName(projectName, targetPath);
