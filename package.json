@@ -1,8 +1,8 @@
 {
-  "name": "create-atsp",
+  "name": "create-defts",
   "type": "module",
   "version": "0.0.3",
-  "description": "Create a TypeScript project.",
+  "description": "Create a project using TypeScript as the default language.",
   "author": {
     "name": "hacxy",
     "email": "hacxy.js@outlook.com"
@@ -13,7 +13,7 @@
     "create-typescript-project"
   ],
   "bin": {
-    "create-atsp": "index.js"
+    "create-defts": "index.js"
   },
   "files": [
     "dist",
