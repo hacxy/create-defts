@@ -1,6 +1,6 @@
-# create-atsp
+# create-defts
 
-🚀 Create a TypeScript project.
+🚀 Create a project using TypeScript as the default language.
 
 English | [简体中文](./README_zh.md)
 
@@ -25,25 +25,25 @@ It is evident that this is a Nodejs-based scaffolding tool designed to help you 
 Using npm:
 
 ```sh
-npm create atsp@latest
+npm create defts@latest
 ```
 
 Using yarn:
 
 ```sh
-yarn create atsp
+yarn create defts
 ```
 
 Using pnpm:
 
 ```sh
-pnpm create atsp
+pnpm create defts
 ```
 
 Using bun:
 
 ```sh
-bun create atsp
+bun create defts
 ```
 
 Please follow the prompts after execution.
@@ -55,19 +55,19 @@ You can also specify the project name and required project template directly thr
 ```sh
 # npm 7+, an additional double dash is required:
 
-npm create atsp@latest my-cli-app -- --template cli-tsup
+npm create defts@latest my-cli-app -- --template cli-tsup
 
 # yarn:
 
-yarn create atsp my-cli-app --template cli-tsup
+yarn create defts my-cli-app --template cli-tsup
 
 # pnpm:
 
-pnpm create atsp my-cli-app --template cli-tsup
+pnpm create defts my-cli-app --template cli-tsup
 
 # bun:
 
-bun create atsp my-cli-app --template cli-tsup
+bun create defts my-cli-app --template cli-tsup
 ```
 
 ## License

@@ -1,6 +1,6 @@
-# create-atsp
+# create-defts
 
-🚀 创建一个typescript项目.
+🚀 创建以TypeScript为默认语言的项目.
 
 简体中文 | [English](./README.md)
 
@@ -19,19 +19,19 @@
 
 使用 npm:
 ```sh
-npm create atsp@latest
+npm create defts@latest
 ```
 使用 yarn:
 ```sh
-yarn create atsp
+yarn create defts
 ```
 使用 pnpm:
 ```sh
-pnpm create atsp
+pnpm create defts
 ```
 使用bun:
 ```sh
-bun create atsp
+bun create defts
 ```
 
 请执行后遵循提示进行操作
@@ -41,16 +41,16 @@ bun create atsp
 您也可以通过额外的命令行选项直接指定项目名称和所需的项目模板。例如，要构建一个CLI项目，请运行：
 ```sh
 # npm 7+, additional double dash is required:
-npm create atsp@latest my-cli-app -- --template cli-tsup
+npm create defts@latest my-cli-app -- --template cli-tsup
 
 # yarn:
-yarn create atsp my-cli-app --template cli-tsup
+yarn create defts my-cli-app --template cli-tsup
 
 # pnpm:
-pnpm create atsp my-cli-app --template cli-tsup
+pnpm create defts my-cli-app --template cli-tsup
 
 # bun:
-bun create atsp my-cli-app --template cli-tsup
+bun create defts my-cli-app --template cli-tsup
 ```
 
 ## License
