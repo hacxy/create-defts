@@ -13,14 +13,12 @@
     "create-typescript-project"
   ],
   "bin": {
-    "defts": "index.js",
     "create-atsp": "index.js"
   },
   "files": [
     "dist",
     "index.js",
-    "templates",
-    "templates.config.json"
+    "templates"
   ],
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
