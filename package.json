@@ -1,7 +1,7 @@
 {
   "name": "defts",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Create a project with TypeScript as the default language.",
   "author": {
     "name": "hacxy",
