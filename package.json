@@ -31,13 +31,13 @@
     "build:out": "tsc -p tsconfig.build.json",
     "commit": "git-cz",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && pnpm publish",
-    "lint": "eslint . --fix",
+    "release": "bumpp && npm publish",
+    "lint": "eslint .",
     "prepare": "simple-git-hooks",
     "prepublishOnly": "npm run build",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
-    "sync": "node  scripts/utils/sync-template.mjs"
+    "sync": "node scripts/utils/sync-template.mjs"
   },
   "dependencies": {
     "@inquirer/prompts": "^7.2.0",
@@ -45,7 +45,6 @@
   },
   "devDependencies": {
     "@hacxy/eslint-config": "^0.0.4",
-    "@types/degit": "^2.8.6",
     "@types/node": "^20.12.5",
     "@vitest/coverage-istanbul": "2.1.8",
     "bumpp": "^9.9.0",
@@ -65,7 +64,7 @@
   },
   "lint-staged": {
     "*": [
-      "eslint . --fix"
+      "eslint --fix"
     ]
   },
   "config": {
