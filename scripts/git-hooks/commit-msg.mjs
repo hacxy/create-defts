@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const msgPath = path.resolve(process.cwd(), '.git/COMMIT_EDITMSG');
 const msg = fs.readFileSync(msgPath, 'utf-8').trim();
-const commitRE = /^Merge.+|(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|types)(\(.+\))?: .{1,50}/;
+const commitRE = /^Merge.+|(?:feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|types)(?:\(.+\))?: .{1,50}/;
 
 if (!commitRE.test(msg)) {
   console.error(
